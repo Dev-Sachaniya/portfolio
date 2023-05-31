@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Voyage";
+    src: url("fonts/voyage-regular.otf");
+    src: url("fonts/voyage-regular-webfont.woff") format("woff"),
+    url("fonts/voyage-regular-webfont.woff2") format("opentype"),
+    }
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    height: 65px;
+    z-index: 1;
+}
+
+.name{
+    display: flex;
+    position: relative;
+    right: 30px;
+}
+
+.name a{
+    color: #d1d1d1;
+    text-decoration: none;
+    font-family: 'Voyage' , sans;
+    font-size: 2em;
+    font-weight: 700;
+    padding-right: 600px;
+}
+
+nav.navmenu{
+    display: flex;
+    margin-right: -150px;
+    position: relative;
+    right: 100px;
+}
+
+.navmenu > a{
+    margin-left: 35px;
+    color: #d1d1d1;
+    font-size: 1.3em;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.underline{
+    position:relative;
+    text-decoration:none;
+    display:inline-block;
+  }
+  .underline:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #d1d1d1;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:100% 50%;
+  }
+  .underline:hover:after { 
+    transform: scaleX(1);
+    transform-origin:0 50%;
+  }
+
+
+
+section.hero-section{
+    width: 100%;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;  
+    position: relative; 
+    height: -webkit-calc(100vh + 65px - 65px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+div.icons{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 1px solid #d1d1d1;
+    width: 40px;
+    height: 120px;
+    border-radius: 20px;
+    top: 150px;
+    right: 100px;
+}
+
+.icons__items{
+    color: #d1d1d1;
+    margin-left: 10px;
+    font-size: 1.5em;
+    position: relative;
+    right: 2px;
+}
+
+.icons__items > .bx:hover{
+    transform: scale(1.4);
+}
+
+.container{
+    width: 500px;
+}
+
+div.astro-image img{
+    width: 400px;
+    height: 400px;
+    animation: moveUpDown 2s linear infinite;
+    border-radius: 50%;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+
+div.name h1{
+    color: #d1d1d1;
+    font-size: 3em;
+}
+
+div.name h1 span.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation-delay: 1s;
+}
+
+ @-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  
+
+
+.container .discription {
+    color: #fff;
+    font-size: 1.3em;
+    
+}
+
+.container .hangout-button{
+    background-color: #434343;
+    color: #fff;
+    width: 120px;
+    height: 30px;
+    padding: auto;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    animation: swing 2s infinite;
+}
+
+.container .hangout-button:hover{
+    opacity: 0.3;
+    animation: none;
+}
+
+section.about{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #434343 0%, #000000 74%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+div.introduction{
+    color: #d1d1d1;
+    width: 400px;
+}
+div.image img{
+    width: 400px;
+    height: 400px;
+}
